@@ -2,7 +2,7 @@
 
 PDF 파싱, 요약, 다중 벡터 검색을 실험하는 프로젝트입니다.
 
-## 설치 및 설정
+## 1. 설치 및 설정
 
 1. 기존 `.venv311` 가상환경을 사용합니다. 프로젝트 폴더와 가상환경 이름은 변경하지 않습니다.
 2. 의존성 패키지를 설치합니다.
@@ -19,6 +19,24 @@ PDF 파싱, 요약, 다중 벡터 검색을 실험하는 프로젝트입니다.
 
 ```cmd
 python -m pip install langchain-unstructured
+```
+
+## 2. 환경 구성
+
+### Poppler와 Tesseract
+
+> **중요:** Poppler와 Tesseract는 Python 패키지가 아니라 운영체제에 설치하는 프로그램입니다. `pip`이나 `poetry add`로 설치할 수 없습니다.
+
+| 도구 | 역할 | macOS | Windows |
+|---|---|---|---|
+| Poppler | PDF 페이지를 이미지로 변환 | `brew install poppler` | Poppler를 설치하고 설치 폴더의 `Library\bin`을 PATH에 추가 |
+| Tesseract | 이미지의 글자를 읽는 OCR | `brew install tesseract` | [Windows 설치 프로그램](https://github.com/UB-Mannheim/tesseract/wiki)을 실행하고 `C:\Program Files\Tesseract-OCR`을 PATH에 추가 |
+
+설치 후 새 터미널을 열고 아래 명령을 실행해 확인합니다. 도움말과 버전 정보가 출력되면 설치된 것입니다.
+
+```cmd
+pdftoppm -h
+tesseract -v
 ```
 
 ## 다른 팀원에게 환경 전달하기
