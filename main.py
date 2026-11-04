@@ -8,7 +8,7 @@ load_dotenv()  # .env의 키를 메모리로 불러오기
 # UnstructuredLoader 설정
 # ───────────────────────────────────────────────
 loader = UnstructuredLoader(
-    file_path="./data/sample_text.pdf",                      # 파싱할 파일 경로
+    file_path="./data/sample_table.pdf",                      # 파싱할 파일 경로
     api_key=os.getenv("UNSTRUCTURED_API_KEY"),   # 신분증
     url=os.getenv("UNSTRUCTURED_API_URL"),       # 서버 주소
     partition_via_api=True,                      # ⭐ 핵심! True = 서버에서 처리
