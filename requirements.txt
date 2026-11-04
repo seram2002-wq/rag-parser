@@ -6,7 +6,7 @@ langchain-community
 langchain-chroma
 langchain-experimental
 langchain-ollama
-langchain-unstructured
+unstructured-client>=0.46.2
 unstructured[all-docs]
 pillow
 pydantic

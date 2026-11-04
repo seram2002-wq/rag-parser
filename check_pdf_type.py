@@ -5,8 +5,8 @@ check_pdf_type.py — PDF가 어떤 유형인지 판별합니다.
 import fitz
 
 for path in ["./data/sample_text.pdf",
-             "./data/sample_table.pdf",
-             "./data/sample_scan.pdf"]:
+             #"./data/sample_table.pdf",
+            "./data/sample_scan.pdf"]:
     doc = fitz.open(path)
     # 첫 3페이지에서 추출되는 글자 수를 셉니다
     chars = sum(len(doc[i].get_text()) for i in range(min(3, len(doc))))
